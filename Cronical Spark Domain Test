@@ -2373,7 +2373,7 @@ def run_lightweight_epoch_test():
         )
         
         # Visualization
-        print(t)        
+           
         plot_lightweight_results(tester, detection_scores, inference_scores)
         
         elapsed = time.time() - start_time
