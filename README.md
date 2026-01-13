@@ -1,4 +1,4 @@
-# A. Custom-ML FrameWork
+# A. (Regular One) Custom-ML FrameWork
 This Framework Was Purely Custom Made by us And we Have conducted some analytical test of It (lyapunov stability test, spectral radius, exploration vs exploitation evaluation), although, This repository contains the Whole Block of cellularAutomataNet, Epsitron Transformer, And EpsilonPolicy, etc to provide originality of development. Hope you understand the math and its Functions. Have Fun Checking and testing. :)
 Creator = Anonimity X.11 / Indonesia 
 
