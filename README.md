@@ -1,6 +1,10 @@
 # A. Custom-ML With Geometric Reasoning  capabilities
+This Branch Contained Explanation regarding CronicalSpark AI
 Hope you understand the math and its Functions. Have Fun Checking and testing. :)
 Creator = Anonimity X.11 / Indonesia 
+
+# CronicalSpark AI:
+CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern.
 
 
 # Mathematical Foundation And Expression
@@ -8,8 +12,8 @@ Creator = Anonimity X.11 / Indonesia
 The Mathematical Principle used to built FolderNet, Epsitron Transformer and Epsilon Policy used the Nonlinear Numpy syntax Such as:
 
 ```math
-~ Numpy.log()  ~ Numpy.log1p()
-~ Numpy.exp() 
+~ numpy.log()  ~ numpy.log1p()
+~ numpy.exp()  ~ numpy.abs()
 ```
 
 The Mathematical Formula That Acts as A Foundation for Nonlinear dynamic equilibrium On All Of those Modules Were:
@@ -97,11 +101,6 @@ Hitchins moduli space is a mathematical equation to calculate the theoretical ge
 ```
 
 where trAa1 used to calculate th the magnitude of a vector or matrix, and seasons (the s1, s2, s3 part) will calculate the theoretical geometrical position based on the magnitude of that matrix or a vector by dividing it with equilibrium, it ensures each seasons can theoretically return a stable equilibrium scalar.
-
-
-
-# CronicalSpark AI:
-CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern.
 
 
 
