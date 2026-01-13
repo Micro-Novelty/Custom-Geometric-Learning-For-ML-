@@ -100,45 +100,10 @@ where trAa1 used to calculate th the magnitude of a vector or matrix, and season
 
 
 
-# CellularAutomataNet Class
-
-CellularAutomataNet is A MLP (Multi Layer perceptron) Neural Network That Used Chain_algorithm, forward_algorithm, and tune_algorithm, to dynamically shift and refine logits before activations, this feedback loop creates a shifting nonlinear process that were constantly self correcting and self adjusting. 
-
-
-# EpsitronTransformer Class
-
-Epsitron is A Custom Transformer meant to Make Agents Adaptive To All environments, both Noisy And Silent, Epsitrons Modules or functions acts as both Linear attention For Agent and Non Linear attention with Meta convergence and multi Matrix Calculation to Achieve convergence faster than regular Transformer.
+# CronicalSpark AI:
+CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern.
 
 
-# LaFoldBot Class
-
-LaFoldBot is A Custom Meta-Helper that helps to Automate And Refined Logits, It Acts As A Coordinator to Supervised Logits or Probabilities, its presence acts like a backbone helper for FolderNet To Help FolderNet Refines its logits.
-
-# GeodeTransformer Class
-
-GeodeTransformer is A transformer that implements Geometric Attention that keeps both superlinear growth with logistic growth implicitly, the module inside contains the primary Equations of trAs, that was inspiredly derived from taylor expansion, thus it encodes implicit eigenvalues and improving stability while preserving memory and exploration.
-
-# geometricalSeeker Class
-
-geometricalseeker is a custom helper seekers that seeks stable divergence, conv, entropy, of scalars inside a matrix by exploring the probabilities of equilibrium in a theoretical dynamic  matrix interaction per training iteration. The mathematical Calculus derivatives used was riemannian equation.
-
-# cellularImbrium Class
-
-CellularImbrium Is a Hierarchical Tree that consist of two Networking Layer perceptron and training functions used to determine if a function should return a value, or scalars or not, by using dynamic lyapunov stability, it ensures that the equation remains stable per iteration and score >= stable_equilibrium, the other Functions contains a stable reprogramming function used to reprogram scalars based on the iteration scores, there is also special Nodes that contains A function that calculates all three special nodes that was acquired through hitcins moduli space equation.
-
-
-# VectorizedTangent:
-VectorizedTangent is a Custom Complex Reasoning AI, that was able to perform on both complex noisy environments, including linear, and non linear data, with built in Certainty measurement.
-This AI has Many types of Reasoning, the most dominant one includes epistemic reasoning and causality reasoning and certainty reasoning, with some other capabilities like internal belief reasoning, VectorizedTangent used advanced nested programming logic including geometric calculation and principles based calculation like anisotropy, and entropy measurement, so performance is a bit of a drawback for this AI.
-
-
-# Solo Development History By me (2025- Now):
-- 3 months Ago Foldernet Was successfully Made by me, for 2 months ive refined it to be a purposeful agent for my small game.
-- After FolderNet was created, i realized that conventional Transformer doesnt directly Work and fit with my FolderNet, since it was using Standard Linear Q, K, V. So FolderNet requires attention that works by using geometric learning, FolderNet was then renamed to CellularNet.
-- EpsilonPolicy was made for the Agents Policy that enables the Agent to Change its behavior by injecting a Stable exploration and exploitation with geometric optimization.
-- LafoldBot And geometrical seeker was later made to Help EpsitronTransformer and EpsilonPolicy, It used as a meta helper for Development.
-- later cellularImbrium Was made to execute Many of that Modules to cooperate and form a stable dynamic hieraichal tree.
-- Logistic equations ensure the model has implicit stability and self converging toward a stable dynamic attractor.
 
 # Empirical Validation of My Model:
 
