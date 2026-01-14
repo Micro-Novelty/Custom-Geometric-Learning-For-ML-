@@ -5,7 +5,22 @@ Hope you understand the math and its Functions. Have Fun Checking and testing. :
 Creator = Anonimity X.11 / Indonesia 
 
 # CronicalSpark AI:
-CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions.
+CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions. 
+
+●. Core capabilities:
+1. One of the key capabilities of CronicalSpark is that it can reason epistemically:
+
+The small_predictive_embedding_module is used for reasoning that contains many functions, Specifically for simulative scenario like counterfactual probe, and factual concrete reasoning
+
+2. It has built in memory:
+Once it receives its first input, the AI will learn to used and manipulate it in order for reasoning for future possibilities. the memory can store up to hundreds of thousands (you can increase it by overwriting the computational_limit = 100.000) so it can store a lot of memory, if youre wondering if this AI can judge all that memory without it get wrong, is that each weight and bias were calculated using sensitive_sigmoid so that each pair of Array of weights and bias is impossible to have the same value of sensitive_sigmoid. While The raw reasoning batch (specifically after the model has stored its weights and bias) is calculated and stored with the anisotropy value of each matrix that correlates with the environment.
+
+From this capabilities, the AI can learn to specialize randomly (without hardcoding) based on its first input it has faced, in human terms this is like internal "belief", or intuition.
+
+●. The model will learn to correlates conditions and form causal modelling of its internal state based on the external feedback (input or human judgement):
+
+This capabilities can be achieved if the AI has learned or trained itself quite a while,the internal_causal_modelling function will allow it to correlate its reasoning batch with weights batch to form causality correlation, and after that, it will correlate it with reasoning module of simulative_search in predictive _embedding_module to further push its reasoning judgement and correlation or causality quality.
+
 
 # Mathematical Foundation And Expression
 
