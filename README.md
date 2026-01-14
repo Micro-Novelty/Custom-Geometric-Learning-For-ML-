@@ -1,7 +1,7 @@
 # A. Custom-ML With Geometric Reasoning  capabilities
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
 Note = (Tho its a bit Buggy, The plot doesnt show up, but you can read the Performance metrics of the prints)
-Hope you understand the math and its Functions. Have Fun Checking and testing. :)
+Hope you understand the math and its Functions. Have Fun Checking and testing, also Feel Free to suggest improvements and Forks! :)
 Creator = Anonimity X.11 / Indonesia 
 
 # CronicalSpark AI:
