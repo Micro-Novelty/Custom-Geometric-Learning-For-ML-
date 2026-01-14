@@ -31,7 +31,14 @@ The Mathematical Formula That Acts as A Foundation for Nonlinear dynamic equilib
 - Below is A Compact Explanation:
 
 ●. Anisotropy:
-Anisotropy is used to calculate the smoothness of how The environment the AI Faced has Changed.
+anisotropy means a phenomenon or data property changes with direction, in this case, The Property of A Matrix that changes with direction. Anisotropy Here is used to calculate the smoothness of Complexity, on how The environment the AI Faced has Changed.
+
+~ Equations in code form:
+```math
+gradient = np.gradient(array)
+calibration = [np.linalg.norm(v) for v in gradient]
+anisotropy = np.std(calibration) / np.mean(calibration)
+```
 
 ●. KL Divergence:
 KL Divergence is Used To Calculate sensitivity on How much the Logit is shifting from uniform logit.
