@@ -12,7 +12,7 @@ CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Mea
 
 The small_predictive_embedding_module is used for reasoning that contains many functions, Specifically for simulative scenario like counterfactual probe, and factual concrete reasoning to form reasoning behavior and later used to correlates its quality of Reasoning.
 
-2. It has built in memory:
+2. It has built in memory storage and can do memory overriding if needed.
 
 Once it receives its first input, the AI will learn to used and manipulate it in order for reasoning for future possibilities. the memory can store up to hundreds of thousands (you can increase it by overwriting the computational_limit = 100.000) so it can store a lot of memory, if youre wondering if this AI can judge all that memory without it get wrong, is that each weight and bias were calculated using sensitive_sigmoid so that each pair of Array of weights and bias is impossible to have the same value of sensitive_sigmoid. While The raw reasoning batch (specifically after the model has stored its weights and bias) is calculated and stored with the anisotropy value of each matrix that correlates with the environment.
 
