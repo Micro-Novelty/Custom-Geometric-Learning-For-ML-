@@ -68,7 +68,7 @@ distance = Initial_value[Initial_value > 0]
 entropy = -np.sum(distance * np.log2(distance))
 ```
 
-Here distance is used to prevent negative value in order not to prevent underflow.
+Here distance is used to prevent negative value in order to prevent underflow.
 
 
 ●. KL Divergence:
