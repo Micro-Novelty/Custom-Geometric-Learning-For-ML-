@@ -40,6 +40,21 @@ calibration = [np.linalg.norm(v) for v in gradient]
 anisotropy = np.std(calibration) / np.mean(calibration)
 ```
 
+Where np.linalg.norm is used to calculate the magnitude of each value inside the gradient to be used for calculating the complexity of the array it face.
+
+●. Entropy:
+Entropy is used to calculate the initial loss of value a matrix has. The use of Entropy here is to minimize a decent loss of information preservation when calculating the Geometric value of a matrix.
+
+~ Equations in code form:
+```math
+Initial_value = x1 / np.sum(x1)
+distance = Initial_value[Initial_value > 0]	
+entropy = -np.sum(distance * np.log2(distance))
+```
+
+Here distance is used to prevent negative value in order not to prevent underflow.
+
+
 ●. KL Divergence:
 KL Divergence is Used To Calculate sensitivity on How much the Logit is shifting from uniform logit.
 - Code Formula:
