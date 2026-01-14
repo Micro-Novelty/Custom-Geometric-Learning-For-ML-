@@ -5,7 +5,7 @@ Hope you understand the math and its Functions. Have Fun Checking and testing. :
 Creator = Anonimity X.11 / Indonesia 
 
 # CronicalSpark AI:
-CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback.
+CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions.
 
 # Mathematical Foundation And Expression
 
