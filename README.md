@@ -7,6 +7,10 @@ Creator = Anonimity X.11 / Indonesia
 # CronicalSpark AI:
 CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions. 
 
+●. IMPORTANT NOTES:
+~ This AI doesnt have explicit training functions, it can train itself based on the reasoning it has done before and modify its memory allocations, including weight, bias and reasoning batch. The quality of training depends on the coherence belief of its previous stage and Current stage of reasoning. This allows it to prevent overfitting, because almost all its weight, bias and reasoning batch has its own value of complexity from the sensitive_sigmoid and anisotropy (later explained in the mathematical explanation below).
+
+
 ●. Core capabilities:
 1. One of the key capabilities of CronicalSpark is that it can reason epistemically:
 
