@@ -28,6 +28,9 @@ From this capabilities, the AI can learn to specialize randomly (without hardcod
 
 This capabilities can be achieved if the AI has learned or trained itself quite a while,the internal_causal_modelling function will allow it to correlate its reasoning batch with weights batch to form causality correlation, and after that, it will correlate it with reasoning module of simulative_search in predictive _embedding_module to further push its reasoning judgement and correlation or causality quality.
 
+3. Low Computing time:
+
+Computing time for this AI usually sits around 50 ms and peak around 100 - 200 ms for deeper reasoning, can be made efficient, but for now, all is numpy because its readable and provides easier modification in the future.
 
 # Mathematical Foundation And Expression
 
@@ -151,6 +154,16 @@ Hitchins moduli space is a mathematical equation to calculate the theoretical ge
 ```
 
 where trAa1 used to calculate th the magnitude of a vector or matrix, and seasons (the s1, s2, s3 part) will calculate the theoretical geometrical position based on the magnitude of that matrix or a vector by dividing it with equilibrium, it ensures each seasons can theoretically return a stable equilibrium scalar.
+
+
+# Specific Use Case:
+
+1. Game Agent:
+This AI can be plugged easily to any Game that requires An Agent to reason in a complex environment without it being overfitting
+
+2. General Domain:
+Specifically for finance, that can detect a market change, and calculates the future consequences based on the market and change of needs complexity
+And can be Tested on Medical diagnosis if viable, but General Domain will require an extensive Test of real deployment, so this hypothesis can be cut off if unproven.
 
 
 
