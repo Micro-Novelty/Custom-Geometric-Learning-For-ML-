@@ -18,7 +18,7 @@ Once it receives its first input, the AI will learn to used and manipulate it in
 
 From this capabilities, the AI can learn to specialize randomly (without hardcoding) based on its first input it has faced, in human terms this is like internal "belief", or intuition.
 
-●. The model will learn to correlates conditions and form causal modelling of its internal state based on the external feedback (input or human judgement):
+3. The model will learn to correlates conditions and form causal modelling of its internal state based on the external feedback (input or human judgement):
 
 This capabilities can be achieved if the AI has learned or trained itself quite a while,the internal_causal_modelling function will allow it to correlate its reasoning batch with weights batch to form causality correlation, and after that, it will correlate it with reasoning module of simulative_search in predictive _embedding_module to further push its reasoning judgement and correlation or causality quality.
 
