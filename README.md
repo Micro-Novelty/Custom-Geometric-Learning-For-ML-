@@ -10,6 +10,8 @@ CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Mea
 ●. IMPORTANT NOTES:
 ~ This AI doesnt have explicit training functions, it can train itself based on the reasoning it has done before and modify its memory allocations, including weight, bias and reasoning batch. The quality of training depends on the coherence belief of its previous stage and Current stage of reasoning. This allows it to prevent overfitting, because almost all its weight, bias and reasoning batch has its own value of complexity from the sensitive_sigmoid and anisotropy (later explained in the mathematical explanation below).
 
+It only has a small training module in its sub_agent function, dedicated to make the sub agent to cooperate on consensus. But it doesnt influenced the entire reasoning architecture, only the local sub_agent.
+
 
 ●. Core capabilities:
 1. One of the key capabilities of CronicalSpark is that it can reason epistemically:
