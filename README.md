@@ -17,15 +17,21 @@ The Mathematical Principle used to built FolderNet, Epsitron Transformer and Eps
 ```
 
 The Mathematical Formula That Acts as A Foundation for Nonlinear dynamic equilibrium On All Of those Modules Were:
+~ Anisotropy
+~ Entropy
 ~ Kullback-Leibler (KL) Divergence
 ~ Curvature Geometry
 ~ Nested Exponentials
 ~ Efficient KL comparatives
 ~ sigmoid 
 
+
 .- Explanation About Why I Used That Mathematical Principles is How They Can Calculate Logits Or Probabilities Sensitivity, Meta Simulations Or Planner
 , and compare them directly with each Divergence formulas from the Meta Simulations and the Raw Logits.
 - Below is A Compact Explanation:
+
+●. Anisotropy:
+Anisotropy is used to calculate the smoothness of how The environment the AI Faced has Changed.
 
 ●. KL Divergence:
 KL Divergence is Used To Calculate sensitivity on How much the Logit is shifting from uniform logit.
