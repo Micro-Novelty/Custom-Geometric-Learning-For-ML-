@@ -1628,7 +1628,7 @@ class CronicalSpark:
 		mse = np.nan_to_num(mse, nan=0.0, posinf=1e340, neginf=1e-340)																			
 		return mse
 			
-	def _cache_relations(self, batch, x):
+		def _cache_relations(self, batch, x):
 		parameters = self.parameters
 		id = random.randint(0, 250)		
 				
@@ -1639,10 +1639,10 @@ class CronicalSpark:
 		if len(batch) > len(x) and isinstance(batch[0], np.ndarray) or isinstance(batch[0], list):
 			for key in range(len(batch)):
 				curve = constant + np.mean(np.abs(np.diff(np.diff(batch[key]))))
-				cache[f"item{key}"] = batch[key], sigmoid
+				cache[f"w{key}"] = batch[key], sigmoid
 		else:
 			curve = constant + np.mean(np.abs(np.diff(np.diff(batch))))							
-			cache[f"item{id}"] = batch, sigmoid
+			cache[f"w{id}"] = batch, sigmoid
 				
 		sigmoid_relations = 1.0 / (1.0 - curve)
 		matching_weight = [key for key, (arr, idx) in parameters.items() if key.startswith("w") and np.any(np.isclose(arr, sigmoid_relations, atol=1e-3))]
@@ -1652,24 +1652,38 @@ class CronicalSpark:
 			for match in matching_weight:
 				weight, idx = parameters[match]
 		
-			self.parameters[f"w{id}"] = weight, sigmoid_relations
-			refinement = weight	
-				
+			if len(weight) > len(x):
+				refinement = weight[0].copy()
+			else:
+				refinement = weight.copy()
+			self.parameters[f"w{id}"] = refinement, sigmoid_relations
+
+								
 		elif matching_bias:
 			for match in matching_bias:
 				bias, idx = parameters[match]
-			refinement = self.leaky_relu(bias)				
-			self.parameters[f"b{id}"] = x, sigmoid_relations			
-		else:
-			refinement = x
-			self.parameters[f"w{id}"] = x, sigmoid_relations
+			if len(bias) > len(x):
+				refinement = self.leaky_relu(bias[0])	
+			else:
+				refinement = self.leaky_relu(bias)				
+			self.parameters[f"b{id}"] = refinement, sigmoid_relations		
 				
-		cache.clear()					
+		else:
+			matching_cache = [key for key, (arr, idx) in cache.items() if key.startswith("w") and np.any(np.isclose(arr, sigmoid_relations, atol=1e-3))]	
+			if matching_cache:
+				for match in matching_cache:
+					w, relations = cache[match]
+				if len(w) > len(x):
+					refinement = w[0].copy()
+				else:
+					refinement = w.copy()	
+			else:
+				refinement = self._external_judgement_of_permission(x)	
+			self.parameters[f"w{id}"] = refinement, sigmoid_relations
+							
 		refinement = np.nan_to_num(refinement, nan=0.0, posinf=1e340, neginf=1e-340)
 		
-		return refinement, sigmoid_relations					
-
-		
+		return refinement, sigmoid_relations		
 	def internal_causal_modelling(self, x):
 		
 		parameters = self.parameters
