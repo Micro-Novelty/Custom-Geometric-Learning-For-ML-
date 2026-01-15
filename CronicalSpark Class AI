@@ -1,3 +1,10 @@
+import numpy as np
+import random
+
+def outer_feedback(logits_size):
+	instinct = np.random.normal(size=logits_size)
+	return instinct
+	
 class CronicalSpark:
 	def __init__(self, layers=[70, 160, 256, 135, 60], computational_limit=100):		
 		self.layers = layers
@@ -463,7 +470,11 @@ class CronicalSpark:
 					squared  = eps + (cl - w) ** 2
 					mse = np.sum(squared) / len(x)
 					rmse = np.sqrt(mse)
-					squared2  = eps + (cl - x) ** 2
+					if len(cl) == len(x):
+						squared2  = eps + (cl - x) ** 2
+					else:
+						unc, _ = self.uncertainty_handling_module(x, type=None)
+						squared2 = eps + (unc, x)
 					mse2 = np.sum(squared2) / len(x)
 					grounded_rmse = np.sqrt(mse2)	
 					mutual_groundedness = 1.0 + rmse /  grounded_rmse**2
@@ -1326,7 +1337,34 @@ class CronicalSpark:
 				
 		return calibrated
 				
-										
+	def internal_sensitivity_of_pattern_discrimination(self, x, groundedness):
+		constant = 1/137
+		eps = 1e-5
+		
+		g = np.gradient(x)
+		cal = [np.linalg.norm(g1) for g1 in g]
+		sim_anisotropy = np.std(cal) / (eps + np.mean(cal))
+		
+		eval = x / np.sum(x)
+		dist = eval[eval > 0]
+		entropy = -np.sum(dist * np.log2(dist))
+		
+		inverse_var = 1.0 / (1.0 + np.std(x))
+		
+		#inverse var is used to calculate the precision of confidence in its output, including the coherences of the output that correlates to its reasoning quality		
+		trA1 = inverse_var / (1.0 - entropy)
+		trA2 = (1/2) + sim_anisotropy / (1.0 + trA1**2)
+		trA3 = (1/6) + groundedness / (trA2**2 - 1.0)
+		
+		impactful_ratio = 1.0 + inverse_var / trA3**2
+		discrimination_error = groundedness / eps + (1.0 - sim_anisotropy) 
+		discrimination_gate = np.exp(-np.abs(np.log(discrimination_error)))	
+		quality = np.exp(-np.abs(np.log(impactful_ratio)))	
+		
+		quality_gate = quality >= discrimination_gate
+		return quality_gate
+				
+														
 	def _multi_modal_vertex(self, x):
 		id = random.randint(0, 250)
 		eps = 1e-5
@@ -1364,9 +1402,14 @@ class CronicalSpark:
 			else:
 				certainty, _ = self.uncertainty_handling_module(input, type="weight")
 				chosen = certainty.copy()
-				
-			output, _ = self._cache_relations(chosen, x)				
-			squared = eps + ((input + noise) - x) ** 2
+						
+			output, _ = self._cache_relations(chosen, x)	
+			if len(input) < len(x) or len(input) > len(x):
+				uncertainty, _ = self.uncertainty_handling_module(x, type=None)
+				squared = eps + (uncertainty - x) ** 2
+			else:
+
+				squared = eps + ((input + noise) - x) ** 2
 			sample = np.sum(squared) / len(x)
 			rmse = np.sqrt(sample)
 			belief = 1.0 + internal_pattern / rmse**2
@@ -1375,9 +1418,10 @@ class CronicalSpark:
 			gated = np.exp(-np.abs(np.log(grounded_belief)))
 			acceptance = gated >= grounded_belief
 			
+			respective_pattern = self.internal_sensitivity_of_pattern_discrimination(output, grounded_belief)			
 			if isinstance(output, float):
 				refined = noise.copy()			
-			elif acceptance:
+			elif acceptance and respective_pattern:
 				return output.copy()	
 			else:
 				refined, _ = self.uncertainty_handling_module(output, type="weight")		
@@ -1438,8 +1482,8 @@ class CronicalSpark:
 			refinement = np.ones_like(x)
 
 		return refinement
-		
-					
+												
+
 
 	def uncertainty_handling_module(self, x, type=None):
 		modulo_distribution = None
@@ -1692,7 +1736,7 @@ class CronicalSpark:
 					return refinement 			
 											
 		else:						
-			uncertainty_handle, score = self.uncertainty_handling_module(vertex, type=None)
+			uncertainty_handle, score = self.uncertainty_handling_module(vertex, type='weight')
 			refinement = uncertainty_handle
 			self.parameters[f"w{id}"] = refinement, score
 			
@@ -1707,11 +1751,12 @@ class CronicalSpark:
 		causal_reasoning = np.exp(-np.abs(np.log(coherence_structure)))
 		causal_gate = causal_reasoning <= model_conf
 		
-		if causal_gate:
+		respective_pattern = self.internal_sensitivity_of_pattern_discrimination(refinement, equilibrium_consensus)					
+		if causal_gate and respective_pattern:
 			refined, _  = self.small_predictive_embedding_module(refinement)
 		else:
-			refined = refinement.copy()											
-									
+			refined, _ = self.uncertainty_handling_module(refinement, type=None)	
+				
 		if np.isnan(refined).any() or not np.isfinite(refined).any():
 			refined= np.ones_like(x)
 		return refined								
@@ -2046,7 +2091,3 @@ class CronicalSpark:
 			if len(logistic) > len(x):
 				logistic = logistic[0]											
 			return logistic 		
-
-
-advanced_network = CronicalSpark(layers=[70, 160, 256, 135, 60], computational_limit=500)				
-		
