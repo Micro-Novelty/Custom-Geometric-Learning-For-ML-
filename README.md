@@ -1,6 +1,7 @@
 # A. Custom-ML With Geometric Reasoning  capabilities
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
-Note = You can immediately execute the domain test of CronicalSpark without any modification, the results will show a plot of graphics that correlates to CronicalSpark abilities.
+Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
+
 Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! :)
 Creator = Anonimity X.11 / Indonesia 
 
