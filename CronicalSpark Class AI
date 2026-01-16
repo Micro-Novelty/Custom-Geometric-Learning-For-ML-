@@ -473,7 +473,7 @@ class CronicalSpark:
 					if len(cl) == len(x):
 						squared2  = eps + (cl - x) ** 2
 					else:
-						unc, _ = self.uncertainty_handling_module(x, type=None)
+						unc, _ = self.outer.uncertainty_handling_module(x, type=None)
 						squared2 = eps + (unc, x)
 					mse2 = np.sum(squared2) / len(x)
 					grounded_rmse = np.sqrt(mse2)	
@@ -1628,7 +1628,7 @@ class CronicalSpark:
 		mse = np.nan_to_num(mse, nan=0.0, posinf=1e340, neginf=1e-340)																			
 		return mse
 			
-		def _cache_relations(self, batch, x):
+	def _cache_relations(self, batch, x):
 		parameters = self.parameters
 		id = random.randint(0, 250)		
 				
@@ -1683,7 +1683,9 @@ class CronicalSpark:
 							
 		refinement = np.nan_to_num(refinement, nan=0.0, posinf=1e340, neginf=1e-340)
 		
-		return refinement, sigmoid_relations		
+		return refinement, sigmoid_relations			
+
+		
 	def internal_causal_modelling(self, x):
 		
 		parameters = self.parameters
@@ -2104,4 +2106,6 @@ class CronicalSpark:
 				self.alignment_memory[f"w{id}"] = logistic, alignment_ev
 			if len(logistic) > len(x):
 				logistic = logistic[0]											
-			return logistic 		
+			return logistic
+			
+advanced_network = CronicalSpark(layers=[30, 60, 40, 20, 10], computational_limit=10000)							
