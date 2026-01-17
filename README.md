@@ -2,7 +2,7 @@
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
 Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
 
-Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! :)
+Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! If you want further Information regarding an Empirical results, i've already provided some explanation and results plots that you can immediately see and conclude in discussions. :)
 Creator = Anonimity X.11 / Indonesia 
 
 # CronicalSpark AI:
