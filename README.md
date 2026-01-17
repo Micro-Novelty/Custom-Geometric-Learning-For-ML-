@@ -162,9 +162,8 @@ where trAa1 used to calculate th the magnitude of a vector or matrix, and season
 1. Game Agent:
 This AI can be plugged easily to any Game that requires An Agent to reason in a complex environment without it being overfitting, it only needs one external functions that the AI wants, an external functions that provides a human judgement, Specifically for context needs if the AI is very uncertain, but can made Autonomous too if you don't want any human intervention by only providing the correct answer to a logits form automatically, or, also a shared value of other CronicalSpark instance for multi agent Cooperation, in the external function. All depends on your needs.
 
-2. General Domain:
-Specifically for finance, that can detect a market change, and calculates the future consequences based on the market and change of needs complexity
-And can be Tested on Medical diagnosis if viable, but General Domain will require an extensive Test of real deployment, so this hypothesis can be cut off if unproven, but the previous test is already promising because it can perform well in certainty linear, and sine pattern, while also being strategically cautious in random and sine pattern, can be extended to task-reliability test later.
-
+2. General Domain (hypothesized Only, but Empirical results are promising):
+Specifically for Complex Dynamic of finance and markets, that can detect a market change, and calculates the future consequences based on the market and change of needs complexity
+And can be Tested on Medical diagnosis if viable, but General Domain will require an extensive Test of real deployment, so this hypothesis can be cut off if unproven, but the previous test is already promising because it can perform well in certainty linear, and sine pattern, while also being strategically cautious in random and sine pattern, can be extended to task-reliability test later. This Was only a hypothesized capabilities, but Empirical results Showed CronicalSpark can reasons for long term conditions, and evaluate it based on certainty metrics and groundedness of alignment with internal coherences and external stimuli of anisotropy.
 
 
