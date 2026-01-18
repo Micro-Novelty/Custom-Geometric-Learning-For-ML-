@@ -2,9 +2,24 @@
 # ●. Beginner Guides and Introduction:
 A. Neuro-Symbolic AI (NSAI) is a hybrid AI approach that merges the pattern recognition strengths of neural networks (deep learning) with the logical reasoning of symbolic AI (rules, knowledge graphs) to create more robust, explainable, and human-like AI systems, tackling limitations like AI hallucinations by grounding data-driven learning in explicit knowledge. CronicalSpark Represents an architectural shift in how Neuro Symbolic AI Used Geometric Learning to reasons about causality and context correlation, This kind of AI performance can't be evaluated by benchmarking Convergence, this Kind of AI usually rarely converged for longer reasoning Epochs, because it differs by the noise and divergence of continous complexity in an environment, thus making it reliable for Real world Complex environment. The Reason why this Non-convergence behavior is valuable is because Real World environments has Complex noise that consist of micro to macro change in each pattern, thus Longer convergence can't emerge randomly for Neuro Symbolic AI because the output was determined from the consistent internal coherences pattern recognition and reasoning, thus a model must adapts and continously learn each patterns and correlations based on the complexity of situation, so an AI that Doesnt Converge And Overfits is a practical Minimum for real world deployment in which current Deep learning Lacks.
 
-# A. Custom-Neuro Symbolic AI With Geometric Reasoning  capabilities
+# 🌐 Key Features You can try!:
+CronicalSpark is not regular Deep learning, so to visualize its Internal Reasoning, we need to use:
+1. Kurtosis and Skew histogram
+2. Power Law Tail
+3. Autocorrelation Function
+4. Return Map and Q-Q Plot 
+
+This Functions will enable us to see the Internal dynamic of How CronicalSpark can reasons when it was given a random input, and forms a stable regime of reasoning, you can Test this yourself, i provided the codes for This kind of testing so you can See and expand the test!
+
+# ⚡ Custom-Neuro Symbolic AI With Geometric Reasoning capabilities
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
 Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
+
+# 📑 Libraries in Python Requirements:
+1. Numpy for processing
+2. Matplotlib for visualization
+• Supports Python 3.8+
+
 
 Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! If you want further Information regarding an Empirical results, i've already provided some explanation and results plots that you can immediately see and conclude in discussions. :)
 Creator = Anonimity X.11 / Indonesia 
