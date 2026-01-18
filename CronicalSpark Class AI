@@ -5,7 +5,10 @@ def outer_feedback(logits_size):
 	instinct = np.random.normal(size=logits_size)
 	return instinct
 	
+	
+
 class CronicalSpark:
+
 	def __init__(self, layers=[70, 160, 256, 135, 60], computational_limit=100):		
 		self.layers = layers
 		self.limit = computational_limit
@@ -22,10 +25,7 @@ class CronicalSpark:
 		
 		self.episodic_memory = {}
 		self.alignment_memory = {}
-		
-		self.coherence1 = []
-		self.coherence2 = []
-		self.coherence3 = []		
+		self.simulation_prediction = {}
 		
 		self.unc_count = 0		
 
@@ -1043,8 +1043,14 @@ class CronicalSpark:
 				robustness_tolerance = 1.0 + grounded_belief / robustness 
 											
 				equilibrium = 1.0 + doubt_tolerance / robustness_tolerance**2
-				
-				new_imaginative_perspective = np.dot(memory_que, equilibrium)
+				delusional_insight = self.outer.defensive_bias(memory_que, grounded_belief)					
+								
+				if delusional_insight:
+					structured_noise = self.implicit_noise(x)
+					new_imaginative_perspective = np.dot(structured_noise, equilibrium)					
+				else:					
+					new_imaginative_perspective = np.dot(memory_que, equilibrium)				
+					
 				if np.isnan(new_imaginative_perspective).any() or not np.isfinite(new_imaginative_perspective).any():
 					new_imaginative_perspective = np.ones_like(x)
 				return new_imaginative_perspective 						
@@ -1154,14 +1160,15 @@ class CronicalSpark:
 					
 				final_gate = np.exp(-np.abs(np.log(final_gate)))
 				reasoning_gate = final_gate <= conf_gate		
-						
+				delusional_insight = self.outer.defensive_bias( refined, grounded_rationality)					
+										
 				if self.reasoning or reasoning_gate:
 					refinement = self.main.coherent_long_term_planning(refined)
 				else:
-					if conf_gate > belief:						
+					if conf_gate > belief or delusional_insight:						
 						refinement = self.counterfactual_probe(refined , x, grounded_rationality, epsilon=0.05)
 					else:
-						refinement = refined.copy()
+						refinement = self.outer.uncertainty_handling_module(refined, type="weight")
 										
 				A_projection = query / (1.0 - logistic_growth)
 				B_projection = equilibrium_point / (1.0 - A_projection)
@@ -1284,7 +1291,46 @@ class CronicalSpark:
 			
 		return alignment_conf
 			
-									     	 			
+	def defensive_bias(self, x, groundedness):
+		constant = 1/137
+		eps = 1e-6	
+		
+		alignment = self.alignment_memory
+		episodic = self.episodic_memory
+		
+		g = np.gradient(x)
+		v = [np.linalg.norm(v1) for v1 in g]
+		sim_anisotropy = np.std(v) / (eps + np.mean(v))
+		
+		confidence_coherences= self.confidence_coherences(x, sim_anisotropy, groundedness)
+		pattern_discrimination, _ = self.internal_sensitivity_of_pattern_discrimination(x, groundedness)
+						
+		hist, _ = np.histogram(x, bins=16, density=True)
+		hist += eps
+		hist /= hist.sum()
+		entropy = -np.sum(hist * np.log(hist))	
+		
+		mean_complexity= 1.0 / (1.0 + np.mean(x))
+			
+		val1 = x[:-1]
+		val2 = x[1:]
+		
+		if np.std(val1) < eps or np.std(val2) < eps:
+		  return 0.1
+		 
+		correlation = np.corrcoef(val1, val2)[0, 1]
+		
+		unstable_forgetting = correlation < 0.0
+					
+		if unstable_forgetting:
+			delusional_variance = entropy > 1.0 and sim_anisotropy > mean_complexity and confidence_coherences > 0.75 and unstable_forgetting
+		elif pattern_discrimination:
+			delusional_variance = entropy < 1.0 and sim_anisotropy < mean_complexity and confidence_coherences > 0.75 and pattern_discrimination
+		else:
+			delusional_variance = False
+				
+		return delusional_variance
+											     	 			
 				
 								
 	def implicit_noise(self, x):
@@ -1362,9 +1408,81 @@ class CronicalSpark:
 		quality = np.exp(-np.abs(np.log(impactful_ratio)))	
 		
 		quality_gate = quality >= discrimination_gate
-		return quality_gate
+		return quality_gate, discrimination_gate
 				
 														
+	def evolutionary_predictive_simulation(self, x, groundedness, simulation_epoch=3):
+		eps = 1e-6
+		constant = 1/137
+		id = random.randint(0, 1000)
+		
+		parameters = self.parameters
+		simulation = self.simulation_prediction						
+		reasoning_params = self.reasoning_params
+		model_conf = self.model_conf
+		alignment_mem = self.alignment_memory				
+				
+		if not self.parameters:
+			self.weight_embedding_module(x)
+			
+		g = np.gradient(x.flatten())
+		v = [np.linalg.norm(g1) for g1 in g]
+		sim_anisotropy = np.std(v) / eps + np.mean(v)
+		
+		match_alignment =  [key for key, (input, value) in alignment_mem.items() if key.startswith("w") and np.std(input) % np.std(x) >= 0 and np.std(input) % np.std(x) <= anisotropy]
+		if match_alignment and len(alignment_mem) > 5:
+			for match in match_alignment:
+				w, val = alignment_mem[match]
+			w, _ = self._cache_relations(w, x)
+		else:
+			w, _ = self.uncertainty_handling_module(x, type="weight")				
+						
+		lambda_decay = self.adaptive_lambda_coherences(w, sim_anisotropy, groundedness)
+		
+		if len(alignment_mem) > 10:
+			if sim_anisotropy > 0.15:
+				generate_simulative_lin = np.array([i for i in range(len(x))])
+				decaying_complexity_trajectory = np.dot(generate_simulative_lin, lambda_decay)				
+				precise_invariance = 1.0 / (1.0 + np.std(decaying_complexity))	
+				self.simulation_prediction[f"w{id}"] = decaying_complexity_trajectory, precise_invariance	
+				
+			elif sim_anisotropy > 0.35 and sim_anisotropy < 0.5:
+				generate_simulative_sine = np.array([np.sin(np.linspace(0, 2*np.pi, len(x)))])
+				decaying_complexity_trajectory = np.dot(generate_simulative_sine, lambda_decay)				
+				precise_invariance = 1.0 / (1.0 + np.std(decaying_complexity))					
+				for i in range(simulation_epoch):
+					noise_complexity = self.implicit_noise(decaying_complexity_trajectory)
+					self.simulation_prediction[f"w{i}"] = noise_complexity, precise_invariance
+			else:
+				uncertain_generation, _ = self.uncertainty_handling_module(x, type="weight")
+				precise_invariance = 1.0 / (1.0 + np.std(uncertain_generation))							
+				for i in range(simulation_epoch):
+					noise_complexity = self.implicit_noise(uncertain_generation)
+					self.simulation_prediction[f"w{i}"] = noise_complexity, precise_invariance
+		else:
+			uncertain_generation, _ = self.uncertainty_handling_module(x, type=None)
+			precise_invariance = 1.0 / (1.0 + np.std(uncertain_generation))							
+			for i in range(simulation_epoch):
+				noise_complexity = self.implicit_noise(uncertain_generation)
+				self.simulation_prediction[f"w{i}"] = noise_complexity, precise_invariance			
+		
+		matching_trajectory =  [key for key, (results, precision) in simulation.items() if key.startswith("w") and precision % precise_invariance >= 0 and precision % precise_invariance <= groundedness]
+		if matching_trajectory:
+			for match in matching_trajectory:
+				results, precision = simulation[match]
+			
+			results, _ = self._cache_relations(results, x)
+		else:
+			results, _ = self.uncertainty_handling_module(x, type=None)
+			
+		if np.isnan(results).any() or not np.isfinite(results).any():
+			results = np.ones_like(results)
+			
+		return results 			
+					
+				
+																
+																																												
 	def _multi_modal_vertex(self, x):
 		id = random.randint(0, 250)
 		eps = 1e-5
@@ -1380,6 +1498,11 @@ class CronicalSpark:
 		episodic = self.episodic_memory
 		parameters = self.parameters
 		constant = 1/137
+		
+		g = np.gradient(x)
+		v = [np.linalg.norm(g1) for g1 in g]
+		sim_anisotropy = np.std(v) / (eps + np.mean(v))
+		
 		curvature = constant + np.mean(np.abs(np.diff(np.diff(x))))
 			
 		sensitive_sigmoid = 1.0 / (1.0 - curvature)
@@ -1402,14 +1525,9 @@ class CronicalSpark:
 			else:
 				certainty, _ = self.uncertainty_handling_module(input, type="weight")
 				chosen = certainty.copy()
-						
-			output, _ = self._cache_relations(chosen, x)	
-			if len(input) < len(x) or len(input) > len(x):
-				uncertainty, _ = self.uncertainty_handling_module(x, type=None)
-				squared = eps + (uncertainty - x) ** 2
-			else:
-
-				squared = eps + ((input + noise) - x) ** 2
+				
+			output, _ = self._cache_relations(chosen, x)				
+			squared = eps + ((output + noise) - x) ** 2
 			sample = np.sum(squared) / len(x)
 			rmse = np.sqrt(sample)
 			belief = 1.0 + internal_pattern / rmse**2
@@ -1417,8 +1535,8 @@ class CronicalSpark:
 			grounded_belief = 1.0 + tolerance / rmse**2
 			gated = np.exp(-np.abs(np.log(grounded_belief)))
 			acceptance = gated >= grounded_belief
-			
-			respective_pattern = self.internal_sensitivity_of_pattern_discrimination(output, grounded_belief)			
+					
+			respective_pattern, _ = self.internal_sensitivity_of_pattern_discrimination(output, grounded_belief)			
 			if isinstance(output, float):
 				refined = noise.copy()			
 			elif acceptance and respective_pattern:
@@ -1476,13 +1594,26 @@ class CronicalSpark:
 		trA1 = geodesic_projection / (1.0 - geodesic_manifold)
 		trA2 = (1/2 + equilibrium_point) / (1.0 + trA1**2)
 		trA3 = (1/6 + geodesic_projection) / (trA2**2 - 1.0)
+		
+		information_dynamic_geodesic = 1.0 + trA3 / eps + (1.0 - equilibrium_point)
+		unpreserved_information_complexity  = 1.0 / (1.0 + np.exp(-information_dynamic_geodesic))
+		simulation_order = 1.0 + unpreserved_information_complexity / 1.0 + information_dynamic_geodesic
+		simulation_gate = np.exp(-np.abs(np.log(simulation_order)))
+		
+		recursive_modelling_error = simulation_gate <= sim_anisotropy		
+		if recursive_modelling_error:
+			refined = self.evolutionary_predictive_simulation(embedded, equilibrium_point, simulation_epoch=3)
+		else:
+			refined = embedded.copy()
+			
 		refinement = np.dot(embedded, trA3)				
 												
 		if np.isnan(refinement).any() or not np.isfinite(refinement).any():
 			refinement = np.ones_like(x)
 
 		return refinement
-												
+		
+					
 
 
 	def uncertainty_handling_module(self, x, type=None):
@@ -1683,8 +1814,7 @@ class CronicalSpark:
 							
 		refinement = np.nan_to_num(refinement, nan=0.0, posinf=1e340, neginf=1e-340)
 		
-		return refinement, sigmoid_relations			
-
+		return refinement, sigmoid_relations		
 		
 	def internal_causal_modelling(self, x):
 		
@@ -2070,7 +2200,8 @@ class CronicalSpark:
 			if alignment_ev > 0.75:
 				self.alignment_memory[f"w{id}"] = vertex, alignment_ev
 			if len(vertex) > len(x):
-				vertex = vertex[0]										
+				vertex = vertex[0]
+								 			
 			return vertex			
 		elif soft_gate >= model_conf:
 			causal = self.internal_causal_modelling(output)
@@ -2081,7 +2212,7 @@ class CronicalSpark:
 			if alignment_ev > 0.75:
 				self.alignment_memory[f"w{id}"] = causal, alignment_ev
 			if len(causal) > len(x):
-				causal = causal[0]												
+				causal = causal[0]								
 			return causal								
 		
 		elif silent_killer or model_conf > conf_gate:
@@ -2091,9 +2222,9 @@ class CronicalSpark:
 			if model_conf > 0.5:
 				self.episodic_memory[f"w{id}"] = noise, logistic
 			if alignment_ev > 0.75:
-				self.alignment_memory[f"w{id}"] = logistic, alignment_ev	
+				self.alignment_memory[f"w{id}"] = logistic, alignment_ev
 			if len(logistic) > len(x):
-				logistic = logistic[0]									
+				logistic = logistic[0]						
 			return logistic								
 			
 		else:
@@ -2105,7 +2236,6 @@ class CronicalSpark:
 			if alignment_ev > 0.75:
 				self.alignment_memory[f"w{id}"] = logistic, alignment_ev
 			if len(logistic) > len(x):
-				logistic = logistic[0]											
-			return logistic
-			
-advanced_network = CronicalSpark(layers=[30, 60, 40, 20, 10], computational_limit=10000)							
+				logistic = logistic[0]		
+													
+			return logistic 		
