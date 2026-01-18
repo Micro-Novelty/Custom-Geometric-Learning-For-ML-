@@ -1,3 +1,7 @@
+
+# Beginner Guides:
+A. Neuro-Symbolic AI (NSAI) is a hybrid AI approach that merges the pattern recognition strengths of neural networks (deep learning) with the logical reasoning of symbolic AI (rules, knowledge graphs) to create more robust, explainable, and human-like AI systems, tackling limitations like AI hallucinations by grounding data-driven learning in explicit knowledge. CronicalSpark Represents an architectural shift in how Neuro Symbolic AI Used Geometric Learning to reasons about causality and context correlation, This kind of AI performance can't be evaluated by benchmarking Convergence, this Kind of AI usually rarely converged for longer reasoning Epochs, because it differs by the noise and divergence complexity, thus making it reliable for Real world Complex environment.
+
 # A. Custom-ML With Geometric Reasoning  capabilities
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
 Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
