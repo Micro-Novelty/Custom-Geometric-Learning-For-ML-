@@ -1,6 +1,8 @@
 
 # ●. Beginner Guides and Introduction:
-A. Neuro-Symbolic AI (NSAI) is a hybrid AI approach that merges the pattern recognition strengths of neural networks (deep learning) with the logical reasoning of symbolic AI (rules, knowledge graphs) to create more robust, explainable, and human-like AI systems, tackling limitations like AI hallucinations by grounding data-driven learning in explicit knowledge. CronicalSpark Represents an architectural shift in how Neuro Symbolic AI Used Geometric Learning to reasons about causality and context correlation, This kind of AI performance can't be evaluated by benchmarking Convergence, this Kind of AI usually rarely converged for longer reasoning Epochs, because it differs by the noise and divergence of continous complexity in an environment, thus making it reliable for Real world Complex environment. The Reason why this Non-convergence behavior is valuable is because Real World environments has Complex noise that consist of micro to macro change in each pattern, thus Longer convergence can't emerge randomly for Neuro Symbolic AI because the output was determined from the consistent internal coherences pattern recognition and reasoning, thus a model must adapts and continously learn each patterns and correlations based on the complexity of situation, so an AI that Doesnt Converge And Overfits is a practical Minimum for real world deployment in which current Deep learning Lacks.
+A. Neuro-Symbolic AI (NSAI) is a hybrid AI approach that merges the pattern recognition strengths of neural networks (deep learning) with the logical reasoning of symbolic AI (rules, knowledge graphs) to create more robust, explainable, and human-like AI systems, tackling limitations like AI hallucinations by grounding data-driven learning in explicit knowledge. 
+
+●. CronicalSpark Represents an architectural shift in how Neuro Symbolic AI Used Geometric Learning to reasons about causality and context correlation, This kind of AI performance can't be evaluated by benchmarking Convergence, this Kind of AI usually rarely converged for longer reasoning Epochs, because it differs by the noise and divergence of continous complexity in an environment, thus making it reliable for Real world Complex environment. The Reason why this Non-convergence behavior is valuable is because Real World environments has Complex noise that consist of micro to macro change in each pattern, thus Longer convergence can't emerge randomly for Neuro Symbolic AI because the output was determined from the consistent internal coherences pattern recognition and reasoning, thus a model must adapts and continously learn each patterns and correlations based on the complexity of situation, so an AI that Doesnt Converge And Overfits is a practical Minimum for real world deployment in which current Deep learning Lacks.
 
 # 🌐 Key Features You can try!:
 CronicalSpark is not regular Deep learning, so to visualize its Internal Reasoning, we need to use:
@@ -9,7 +11,7 @@ CronicalSpark is not regular Deep learning, so to visualize its Internal Reasoni
 3. Autocorrelation Function
 4. Return Map and Q-Q Plot 
 
-This Functions will enable us to see the Internal dynamic of How CronicalSpark can reasons when it was given a random input, and forms a stable regime of reasoning, you can Test this yourself, i provided the codes for This kind of testing so you can See and expand the test!
+●. This Functions will enable us to see the Internal dynamic of How CronicalSpark can reasons when it was given a random input, and forms a stable regime of reasoning, you can Test this yourself, i provided the codes for This kind of testing so you can See and expand the test!
 
 # ⚡ Custom-Neuro Symbolic AI With Geometric Reasoning capabilities
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
@@ -25,7 +27,9 @@ Hope you understand the math and its Functions. Have Fun Checking and testing, a
 Creator = Anonimity X.11 / Indonesia 
 
 # Technical Explanation Of CronicalSpark:
-CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions. 
+●. CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. 
+
+●. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions. 
 
 ●. IMPORTANT NOTES:
 ~ This AI doesnt have explicit training functions, it can train itself based on the reasoning it has done before and modify its memory values, including weight, bias and reasoning batch. The quality of training depends on the coherence belief of its previous stage and Current stage of reasoning. This allows it to prevent overfitting, because almost all its weight, bias and reasoning batch has its own value of complexity from the sensitive_sigmoid and anisotropy (later explained in the mathematical explanation below).
