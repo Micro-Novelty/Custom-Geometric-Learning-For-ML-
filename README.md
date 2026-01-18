@@ -13,9 +13,10 @@ CronicalSpark is not regular Deep learning, so to visualize its Internal Reasoni
 
 ●. This Functions will enable us to see the Internal dynamic of How CronicalSpark can reasons when it was given a random input, and forms a stable regime of reasoning, you can Test this yourself, i provided the codes for This kind of testing so you can See and expand the test!
 
-# ⚡ Custom-Neuro Symbolic AI With Geometric Reasoning capabilities
+# ⚡ Small Note:
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
 Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
+*. License = MIT
 
 # 📑 Libraries in Python Requirements:
 1. Numpy for processing
