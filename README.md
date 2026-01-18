@@ -13,7 +13,7 @@ CronicalSpark is not regular Deep learning, so to visualize its Internal Reasoni
 
 ●. This Functions will enable us to see the Internal dynamic of How CronicalSpark can reasons when it was given a random input, and forms a stable regime of reasoning, you can Test this yourself, i provided the codes for This kind of testing so you can See and expand the test!
 
-# ⚡ Small Note:
+# 📃 Small Note:
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
 Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
 *. License = MIT
@@ -58,7 +58,7 @@ This capabilities can be achieved if the AI has learned or trained itself quite 
 
 Computing time for this AI usually sits around 50 ms and peak around 100 - 200 ms for deeper reasoning, can be made efficient, but for now, all is numpy because its readable and provides easier modification in the future.
 
-# Mathematical Foundation And Expression
+# ⚡ Mathematical Foundation And Expression
 
 The Mathematical Principle used to built FolderNet, Epsitron Transformer and Epsilon Policy used the Nonlinear Numpy syntax Such as:
 
@@ -182,7 +182,7 @@ Hitchins moduli space is a mathematical equation to calculate the theoretical ge
 where trAa1 used to calculate th the magnitude of a vector or matrix, and seasons (the s1, s2, s3 part) will calculate the theoretical geometrical position based on the magnitude of that matrix or a vector by dividing it with equilibrium, it ensures each seasons can theoretically return a stable equilibrium scalar.
 
 
-# Specific Use Case:
+# 🌐 Specific Use Case:
 
 1. Game Agent:
 This AI can be plugged easily to any Game that requires An Agent to reason in a complex environment without it being overfitting, it only needs one external functions that the AI wants, an external functions that provides a human judgement, Specifically for context needs if the AI is very uncertain, but can made Autonomous too if you don't want any human intervention by only providing the correct answer to a logits form automatically, or, also a shared value of other CronicalSpark instance for multi agent Cooperation, in the external function. All depends on your needs.
