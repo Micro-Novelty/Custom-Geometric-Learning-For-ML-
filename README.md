@@ -25,8 +25,8 @@ Note = You can immediately execute the  "domain test" code of CronicalSpark with
 
 
 Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! If you want further Information regarding an Empirical results, i've already provided some explanation and results plots that you can immediately see and conclude in discussions. :)
-Creator = Anonimity X.11 / Indonesia 
 
+•.Creator = Anonimity (X.11) / Indonesia As part of a standalone research Project for Studying How Neuro Symbolic AI could Be Programmed using Geometric intelligence and Advanced Programming logic for efficient Execution.
 # Technical Explanation Of CronicalSpark:
 ●. CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. 
 
