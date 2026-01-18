@@ -26,7 +26,11 @@ class CronicalSpark:
 		self.episodic_memory = {}
 		self.alignment_memory = {}
 		self.simulation_prediction = {}
-		
+
+		self.coherence1 = []
+		self.coherence2 = []
+		self.coherence3 = []		
+				
 		self.unc_count = 0		
 
 	def weight_embedding_module(self, x):
