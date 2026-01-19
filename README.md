@@ -69,8 +69,9 @@ Ex = [1, 2, 3], its size will be 3]
 
 2. Next, Find meta_definitor(x) function, where x is a 1D or 2D Matrix as the first input for CronicalSpark to process that consist of multiple scalars inside the matrix.
 
-●. IMPORTANT CLARITY:
-If "equal_input_output" means that CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input. 
+●. IMPORTANT CLARITY=
+
+~ If "equal_input_output" means that CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input. 
 
 ●. Example Usage:
 ```math
