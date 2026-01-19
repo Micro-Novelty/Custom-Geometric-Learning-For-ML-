@@ -58,6 +58,13 @@ This capabilities can be achieved if the AI has learned or trained itself quite 
 
 Computing time for this AI usually sits around 50 ms and peak around 100 - 200 ms for deeper reasoning, can be made efficient, but for now, all is numpy because its readable and provides easier modification in the future.
 
+# 📌 Quick start to use CronicalSpark:
+
+1. Find meta_definitor(x) function, where x is a 1D or 2D Matrix as the first input for CronicalSpark to process.
+
+●. IMPORTANT NOTES:
+CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input.
+
 # ⚡ Mathematical Foundation And Expression
 
 The Mathematical Principle used to built FolderNet, Epsitron Transformer and Epsilon Policy used the Nonlinear Numpy syntax Such as:
