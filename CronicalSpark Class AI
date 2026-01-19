@@ -5,13 +5,12 @@ def outer_feedback(logits_size):
 	instinct = np.random.normal(size=logits_size)
 	return instinct
 	
-	
-
 class CronicalSpark:
-
-	def __init__(self, layers=[70, 160, 256, 135, 60], computational_limit=100):		
+	def __init__(self, layers=[70, 160, 256, 135, 60], desired_output=10, computational_limit=100, processing_type="equal_input_output"):		
 		self.layers = layers
 		self.limit = computational_limit
+		self.total_output = desired_output
+		self.processing_type = processing_type
 						
 		self.parameters = {}
 		self.reasoning_params = {}
@@ -26,11 +25,11 @@ class CronicalSpark:
 		self.episodic_memory = {}
 		self.alignment_memory = {}
 		self.simulation_prediction = {}
-
+		
 		self.coherence1 = []
 		self.coherence2 = []
 		self.coherence3 = []		
-				
+		
 		self.unc_count = 0		
 
 	def weight_embedding_module(self, x):
@@ -370,7 +369,9 @@ class CronicalSpark:
 					for match in weight:
 						w, idx = parameters[match]
 					for match2 in cache_lin:
-						cl, anisotropy, conf = cache1[match2]	
+						cl, anisotropy, conf = cache1[match2]
+						
+					cl = self.outer._cache_relations(cl, x)	
 					flatten = len(cl.flatten())
 					
 					anisotropy = anisotropy.copy()
@@ -417,6 +418,7 @@ class CronicalSpark:
 					for match2 in cache_nonl:
 						cl, anisotropy, conf = cache2[match2]
 						
+					cl = self.outer._cache_relations(cl, x)				
 					flatten = len(cl.flatten())
 					
 					anisotropy = anisotropy.copy()
@@ -466,7 +468,12 @@ class CronicalSpark:
 					else:
 						unc, conf = self.outer.uncertainty_handling_module(x, type=None)
 						anisotropy = mag
-												
+						if weight:
+							for we in weight:
+								w, idx = parameters[we]
+						else:
+							w = self.outer.implicit_noise(x)
+																								
 					anisotropy = anisotropy.copy()
 					conf = conf.copy()
 					w, query = self.outer._cache_relations(unc, x)
@@ -1324,7 +1331,7 @@ class CronicalSpark:
 		 
 		correlation = np.corrcoef(val1, val2)[0, 1]
 		
-		unstable_forgetting = correlation < 0.0
+		unstable_forgetting = correlation < 0.05
 					
 		if unstable_forgetting:
 			delusional_variance = entropy > 1.0 and sim_anisotropy > mean_complexity and confidence_coherences > 0.75 and unstable_forgetting
@@ -1360,6 +1367,7 @@ class CronicalSpark:
 			geodesic_manifold = sensitive_sigmoid / (1.0 + geodesic_space)
 			entropy_spike = geodesic_manifold / (1.0 - geodesic_space)
 			noise = np.random.uniform(0, entropy_spike, size=x.shape)
+			
 		if np.isnan(x).any() or not np.isfinite(x).any():
 			noise = np.random.uniform(0, len(x), size=x.shape)
 		return noise
@@ -1485,14 +1493,41 @@ class CronicalSpark:
 		return results 			
 					
 				
-																
-																																												
+	def meta_processor_gate(self, x,  processing_type=None, target_length=20):
+		eps = 1e-6
+		constant = 1/137
+		
+		g = np.gradient(x)
+		v = [np.linalg.norm(g1) for g1 in g]
+		sim_anisotropy = np.std(v) / eps + np.mean(v)
+		
+		curvature = constant + np.mean(np.abs(np.diff(np.diff(x))))
+		sigmoid = 1.0 / (1.0 - curvature)
+
+		if processing_type == "equal_input_output":
+			desired_output = x.copy()
+		else:
+			total_sum = np.sum(original)
+			g = np.gradient(original)
+			v = [np.linalg.norm(g1) for g1 in g]
+			sim = np.std(v) / np.mean(v)
+			random_values = np.random.uniform(0, sim, size=target_length)
+			desired_output = random_values * (total_sum / np.sum(random_values))
+			
+		if np.isnan(desired_output).any() or not np.isfinite(desired_output).any():
+			desired_output = np.ones_like(desired_output)
+		return desired_output		
+														
+																										
+																								
 	def _multi_modal_vertex(self, x):
 		id = random.randint(0, 250)
 		eps = 1e-5
 		threshold = self.fixed_threshold
 		model_conf = self.model_conf
 		alignment = self.alignment_memory
+		total_output = self.total_output 
+		processing_type = self.processing_type
 		
 		noise = self.implicit_noise(x)
 				
@@ -1585,7 +1620,9 @@ class CronicalSpark:
 			x, _ = self.uncertainty_handling_module(x, type=None)
 			
 		self.parameters[f"w{id}"] = x, sensitive_sigmoid
-		self.parameters[f"b{id}"] = x, sensitive_sigmoid																							
+		self.parameters[f"b{id}"] = x, sensitive_sigmoid
+		
+		x = self.meta_processor_gate(x,  processing_type=processing_type, target_length=total_output)																			
 		embedded, similarity = self.small_predictive_embedding_module(x)	
 
 		geodesic_space = similarity / (1.0 - sensitive_sigmoid)					
@@ -2195,6 +2232,9 @@ class CronicalSpark:
 		conf_gate = final_gate >= soft_gate
 		alignment_gate = alignment_ev >= final_gate
 						
+		conf_gate = final_gate >= soft_gate
+		alignment_gate = alignment_ev >= final_gate
+						
 		if conf_gate or alignment_gate:			
 			vertex = self._multi_modal_vertex(output)
 			model_conf = self.confidence_coherences(vertex, sim_anisotropy, grounded_rationality)				
@@ -2240,6 +2280,6 @@ class CronicalSpark:
 			if alignment_ev > 0.75:
 				self.alignment_memory[f"w{id}"] = logistic, alignment_ev
 			if len(logistic) > len(x):
-				logistic = logistic[0]		
-													
-			return logistic 		
+				logistic = logistic[0]
+					
+			return logistic	
