@@ -89,6 +89,7 @@ The Mathematical Principle used to built CronicalSpark used Numpy syntaxes Such 
 ```math
 ~ numpy.log()  ~ numpy.linalg.norm()
 ~ numpy.exp()  ~ numpy.abs()
+~ numpy.mean() ~ numpy.std()
 ```
 
 The Mathematical Formula That Acts as A Foundation for Nonlinear and linear dynamic equations (derived from first principles) On All Of those Modules in CronicalSpark Were:
