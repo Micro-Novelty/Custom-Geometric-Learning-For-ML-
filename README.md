@@ -24,9 +24,7 @@ Note = You can immediately execute the  "domain test" code of CronicalSpark with
 • Supports Python 3.8+
 
 
-Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! If you want further Information regarding an Empirical results, i've already provided some explanation and results plots that you can immediately see and conclude in discussions. :)
-
-•.Creator = Anonimity (X.11) / Indonesia As part of a standalone research Project for Studying How Neuro Symbolic AI could Be Programmed using Geometric intelligence and Advanced Programming logic for efficient Execution for reasoning capabilities.
+~ Hope you understand the math and its Functions. Have Fun Checking and testing, and Feel Free to suggest improvements and Forks! If you want further Information regarding an Empirical results, i've already provided some explanation and results plots that you can immediately see and conclude in discussions. :)
 
 # ●. Technical Explanation Of CronicalSpark:
 ●. CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. 
@@ -216,5 +214,9 @@ This AI can be plugged easily to any Game that requires An Agent to reason in a 
 2. General Domain (hypothesized Only, but Empirical results are promising):
 Specifically for Complex Dynamic of finance and markets, that can detect a market change, and calculates the future consequences based on the market and change of needs complexity
 And can be Tested on Medical diagnosis if viable, but General Domain will require an extensive Test of real deployment, so this hypothesis can be cut off if unproven, but the previous test is already promising because it can perform well in certainty linear, and sine pattern, while also being strategically cautious in random and sine pattern, can be extended to task-reliability test later. This Was only a hypothesized capabilities, but Empirical results Showed CronicalSpark can reasons for long term conditions, and evaluate it based on certainty metrics and groundedness of alignment with internal coherences and external stimuli for anisotropy.
+
+# Development Credit to Author:
+
+●. Author = Anonimity (X.11) / Indonesia As part of a standalone research Project for Studying How Neuro Symbolic AI could Be Programmed using equations derived from Geometric Riemannian equations and Advanced Programming logic for efficient Execution for reasoning capabilities.
 
 
