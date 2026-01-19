@@ -167,7 +167,7 @@ trA3 = (1/6) + logistic1 / (trA2**2) - 1.0
 
 
 ●. Curvature:
-Curvature Is Used to calculate the geometry curve of the logits and the curvature of each Nested logit or Probabilities Simulation.
+Curvature Is Used to calculate the probabilistic curvature of the logits/matrix using second order derivative to acquire the geometric curvature of each Probabilities or matrix.
 
 - Code Formula:
 ```math 
