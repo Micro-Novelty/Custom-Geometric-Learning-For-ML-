@@ -28,7 +28,7 @@ Hope you understand the math and its Functions. Have Fun Checking and testing, a
 
 •.Creator = Anonimity (X.11) / Indonesia As part of a standalone research Project for Studying How Neuro Symbolic AI could Be Programmed using Geometric intelligence and Advanced Programming logic for efficient Execution for reasoning capabilities.
 
-# Technical Explanation Of CronicalSpark:
+# ●. Technical Explanation Of CronicalSpark:
 ●. CronicalSpark is a Custom Complex Reasoning AI That Was Using Certainty as a Measurement of its Performance on task, This AI Performs A Good Certainty (without being overconfident swinging up down like Regular AI on little trainings)  In Linear And Sine Pattern Recognition, While Also Being Strategically Cautious and Opportunist At Random and Step Pattern. 
 
 ●. This AI can also Have Dual Mode, The Human in the Loop Intervention And Autonomous Mode, There is a dedicated Function for CronicalSpark Specifically For It if CronicalSpark needed Human judgement for feedback because it faced a novel uncertainty of conditions. 
@@ -60,10 +60,21 @@ Computing time for this AI usually sits around 50 ms and peak around 100 - 200 m
 
 # 📌 Quick start to use CronicalSpark:
 
-1. Find meta_definitor(x) function, where x is a 1D or 2D Matrix as the first input for CronicalSpark to process.
+1. Find meta_definitor(x) function, where x is a 1D or 2D Matrix as the first input for CronicalSpark to process that consist of multiple scalars inside the matrix.
 
 ●. IMPORTANT NOTES:
-CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input.
+CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input. 
+
+●. Example Usage:
+```math
+Example_list = 
+["apple", "orange", ....]
+input = [0.05, 0.002, ...]
+CronicalSpark_output = [0.2, 0.7, ...] or meta_definitor(input)
+max = np.argmax(CronicalSpark_output)
+Get_Max_value = Example_list[max]
+```
+
 
 # ⚡ Mathematical Foundation And Expression
 
