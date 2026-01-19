@@ -60,10 +60,17 @@ Computing time for this AI usually sits around 50 ms and peak around 100 - 200 m
 
 # 📌 Quick start to use CronicalSpark:
 
-1. Find meta_definitor(x) function, where x is a 1D or 2D Matrix as the first input for CronicalSpark to process that consist of multiple scalars inside the matrix.
+1. First Initialize CronicalSpark class, 
+Assign the computational limit (this mean s the memory limit of CronicalSpark, ex =1000 memory limit size) and your desired output size (ex. = 10 or 20 values in 1D matrix, depends on your output size you want), and the last is processing_type, wether you want the output equal or extended or less. By assigning "equal_input_output" in processing_type, CronicalSpark will prioritize the output to be the same shape and size as the input, regardless of the desired_output you assigned.
+Else other than "equal_input_output", will make the output size different than the input size, matching your assigned  desired_output size.
 
-●. IMPORTANT NOTES:
-CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input. 
+(size here means each value inside a matrix if a matrix consist of 3 values :
+Ex = [1, 2, 3], its size will be 3]
+
+2. Next, Find meta_definitor(x) function, where x is a 1D or 2D Matrix as the first input for CronicalSpark to process that consist of multiple scalars inside the matrix.
+
+●. IMPORTANT CLARITY:
+If "equal_input_output" means that CronicalSpark Input and output is equal, meaning that the number of Input will be the same for output, meaning if you want to extract the max value inside a matrix output, you need to use numpy.argmax(), so actions or tasks must be encoded first in a Python list. The number of total scalars inside a matrix depends on your needs and CronicalSpark doesn't have any restrictions in total scalars of an input. 
 
 ●. Example Usage:
 ```math
