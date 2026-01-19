@@ -147,7 +147,7 @@ Here distance is used to prevent negative value in order to prevent underflow.
 
 
 
-C. 3 fundamental logistic equation derived to acquire the thorough geodesic info per using calculus variations that used to acquire a dimensionless number of probabilities to acquire a stable modelling and a high efficiency of geodesic information in any dimensionless geometric space of properties in moduli space. 
+C. 3 fundamental logistic equation derived to acquire the thorough geodesic info per using calculus variations that used to acquire a dimensionless number of probabilities to acquire a stable modelling and a high efficiency of geodesic information in any dimensionless geometric space of properties in moduli space. This equations was derived by me from taylor expansion series and aswell as Riemannian geometric equations.
 
 ●. Explanation of components:	
    
