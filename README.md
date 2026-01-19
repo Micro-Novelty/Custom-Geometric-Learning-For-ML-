@@ -191,6 +191,6 @@ CronicalSpark pattern recognition certainty on linear and non linear dynamic is 
 
 # Development Credit to Author:
 
-●. Author = Anonimity (X.11) / Indonesia As part of a standalone research Project for Studying How Neuro Symbolic AI could Be Programmed using equations derived from Geometric Riemannian equations and Advanced Programming logic for efficient Execution for reasoning capabilities.
+●. Author = Anonimity (X.11) / Indonesia As part of a standalone research Project for Studying How Neuro Symbolic AI could Be Programmed using equations derived from Geometric Riemannian equations and Advanced Programming logic for efficient Execution on reasoning capabilities.
 
 
