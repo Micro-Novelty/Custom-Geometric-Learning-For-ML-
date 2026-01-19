@@ -15,8 +15,9 @@ CronicalSpark is not regular Deep learning, so to visualize its Internal Reasoni
 
 # 📃 Small Note:
 This Branch Contained Explanation regarding CronicalSpark AI, Also I Have Provided A TestBed for Cronical Spark itself that anyone can use and see the Performance of CronicalSpark 
-Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification, the results will show a matplot of graphics that correlates to CronicalSpark abilities.
-*. License = MIT
+Note = You can immediately execute the  "domain test" code of CronicalSpark without any modification and I've already provided a quick analysis of its internal dynamics in the codes, titled "CronicalSpark internal physics evaluation", the results will show a matplot of graphics that correlates to CronicalSpark abilities.
+
+●. License = MIT
 
 # 📑 Libraries in Python Requirements:
 1. Numpy for processing
